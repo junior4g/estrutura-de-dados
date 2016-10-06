@@ -1,7 +1,3 @@
-
-/*Scrip de manipulaão de FILA ou FIFO First In First Out
-Feito por André Gondim */
-
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 3
