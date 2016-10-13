@@ -1,5 +1,5 @@
 /*
-    Aula do dia 12/10/2016
+    Aula do dia 13/10/2016
     Lista Estatica Encadeada
 */
 
