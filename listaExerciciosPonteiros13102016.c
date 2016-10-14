@@ -16,3 +16,5 @@ printf("%d - %d - %d\n", Q->Elem, Q->Prox->Elem); //2 - 3 - 4
 Q = Q->Prox; //A
 printf("%d - %d - Perde-se a posicao de 2 \n",Q->Elem, Q->Prox->Elem); // 3 - 4
 */
+
+Letra H) Da erro de compilação, pois um é ponteiro e outro não
