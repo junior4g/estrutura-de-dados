@@ -14,3 +14,10 @@ na folha,
 consulta no computador,
 escrever o código em uma folha,
 somente a parte que ele pedir,
+
+2º Prova dia 15/12,
+1 aula ,
+inserir e remover elemento em arvore 2 3 4 no desenho
+na folha,
+
+2 aula,
