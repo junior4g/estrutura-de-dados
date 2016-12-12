@@ -3,9 +3,9 @@
 	Disciplina: INF0061 - Estrutura de Dados (2016 .2 - TA)
 	Professor: Edmundo Sergio Spoto  
 	Projeto Final da Disciplina - Teatro
-	Alunos: Gustavo Antunes Rocha 		Matrícula: 201513444 
-		Orlando da Cruz Pereira Júnior  Matrícula: 201301679
-		Bianca Raissa Ferreira Nunes 	Matrícula: 201404918
+	Alunos: Gustavo Antunes Rocha 			Matrícula: 201513444 
+			Orlando da Cruz Pereira Júnior  Matrícula: 201301679
+			Bianca Raissa Ferreira Nunes 	Matrícula: 201404918
 */
 
 #include <string.h>
@@ -98,7 +98,6 @@ void LayoutTeatro(Teatro *T, int cod){ // Tela de exibição das poltronas
     Centraliza("ESCOLHA AS POLTRONAS");
     printf("******************************************************************************\n");
     printf("FILEIRA             LADO ESQUERDO                      LADO DIREITO           \n");
-    //printf("-------------------------------------------|----------------------------------\n");
     printf("                                           |                                  \n");
     for(posi = 1; posi <= 18; posi++){ //Fileiras e poltronas
         printf(" %d  \t ", posi);
@@ -151,7 +150,6 @@ void LayoutTeatro(Teatro *T, int cod){ // Tela de exibição das poltronas
 
         printf("\n");
     }
-    //printf("-------------------------------------------------------------------------------\n");
 }
 
 void InserirNovaSessao(Teatro *T, Sessao S){ 
