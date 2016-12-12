@@ -3,9 +3,9 @@
 	Disciplina: INF0061 - Estrutura de Dados (2016 .2 - TA)
 	Professor: Edmundo Sergio Spoto  
 	Projeto Final da Disciplina - Teatro
-	Alunos: Gustavo Antunes Rocha 			Matrícula: 201513444 
-			Orlando da Cruz Pereira Júnior  Matrícula: 201301679
-			Bianca Raissa Ferreira Nunes 	Matrícula: 201404918
+	Alunos: Gustavo Antunes Rocha 		Matrícula: 201513444 
+		Orlando da Cruz Pereira Júnior  Matrícula: 201301679
+		Bianca Raissa Ferreira Nunes 	Matrícula: 201404918
 */
 
 #include <string.h>
