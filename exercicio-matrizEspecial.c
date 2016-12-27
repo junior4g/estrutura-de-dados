@@ -1,7 +1,5 @@
 /*	Aluno: Orlando Da Cruz Pereira Junior
- * 	Materia : Estrutura de Dados
- * 	Professor: Edmundo Sergio Spoto
- * 	Data: 01/09/2016 Semestre 2016-2
+ * 	Data: 25/12/2016 Semestre 2016-2
  *  Matriz Triangular Superior
  * */
 
@@ -9,24 +7,26 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
+#include <conio.h>
 #define N 15
+
 typedef int vetor[N];
 
 void LerMatriz(vetor X){
-	int i=1, j=1, k=0;
+	int i=1, j=1, k=0, cont=0;
 	
 	for(i=1; i<5; i++){
 		for(j=1; j<5; j++){
 			//printf("Digite o elemento M[%d][%d]: ", i, j);
 			//scanf("%d",&X[k]);
 			if(j>i || i==j){
-				X[k] = 3;
+				X[k] = cont;
 			}
 			else{
 				X[k] = 0;
 			}
-			//X[k] = 3;
 			k++;
+			cont++;
 		}
 	}
 }
@@ -36,7 +36,7 @@ void ExibirElementoMatriz(vetor X){
 	
 	for(i=0; i<4; i++){
 		for(j=0; j<4; j++){
-			printf(" %d ", X[k]);
+			printf(" %3.2d ", X[k]);
 			k++;
 		}
 		printf("\n");
@@ -75,69 +75,84 @@ void ProdutoMatriz(vetor A, vetor B, vetor D){
 
 void Consultar_Elemento (vetor A, int x, int y){ 
 	int i, j, k=0;
-	
-	for(i=0; i<4; i++){
-		for(j=0; j<4; j++){
+	for(i=0; i<5; i++){
+		for(j=0; j<5; j++){
 			if((x==i) && (y==j)){
 					printf ("O elemento escolhido eh: %d\n", A[k]);
-				}
+			}
 			k++;
 		}
 	}
 }
+void Consultar_Elemento1 (){ 
+	printf ("O elemento escolhido e: \n");
+}
 
 
 int main(){
-	int i=0;
+	int i=0, x=0, y=0, a, b;
 	vetor A, B, C, D;
+	int j=1, k=0;
+	
 	do 
 		{
-		printf ("\n##################################");
-		printf ("\nEscolha o que deseja fazer com a matriz especial:\n\n");
+		printf ("\n########## MATRIZES ESPECIAIS ###########\n");
+				
+		printf ("\nDigite a opcao desejada:\n");
         printf ("1 - Subtracao\n");
         printf ("2 - Multiplicacao\n");
         printf ("3 - Exibir\n");
         printf ("4 - Consultar\n");
         printf ("6 - Sair\n\n");
+        printf ("Opcao:__");
         scanf("%d",&i);
-
-        if(i == 1){	
-			LerMatriz(A); //sempre usar vetor nas matrizes especiais
-			LerMatriz(B);
+		
+		switch ( i ){
+	    	case 1 :
+				LerMatriz(A);
+				LerMatriz(B);
+				
+				SomaMatriz(A, B, C);
+				printf("\nSoma dos elementos da matriz A e B = C\n");
+				ExibirElementoMatriz(C);
+	    	break;
 			
-			SomaMatriz(A, B, C);
-			printf("\nSoma dos elementos da matriz A e B = C\n");
-			ExibirElementoMatriz(C);
-		}
-		if(i == 2){
-			LerMatriz(A); //sempre usar vetor nas matrizes especiais
-			LerMatriz(B);
+			case 2 :
+				LerMatriz(A); 
+				LerMatriz(B);
+				
+				ProdutoMatriz(A, B, D);
+				printf("\nProduto dos elementos da matriz A por B = D\n");
+				ExibirElementoMatriz(D);
+	    	break;
 			
-			ProdutoMatriz(A, B, D);
-			printf("\nProduto dos elementos da matriz A e B = D\n");
-			ExibirElementoMatriz(D);
-		}
-		if(i == 3){
-			LerMatriz(A); //sempre usar vetor nas matrizes especiais
-			LerMatriz(B);
-			printf("Elementos da matriz A\n");
-			ExibirElementoMatriz(A);
-			printf("\nElementos da matriz B\n");
-			ExibirElementoMatriz(B);
-		}
-		if(i == 4){
-			int x, y;
-			printf("\nDigite a posicao do elemento");
-			printf("\nLinha: ");
-			scanf("%d",&x);
-			printf("Coluna: ");
-			scanf("%d",&y);
-			LerMatriz(A); //sempre usar vetor nas matrizes especiais
-			LerMatriz(B);
-			Consultar_Elemento (A, x, y);
-		}
-
+			case 3 :
+				LerMatriz(A); 
+				LerMatriz(B);
+				
+				printf("\nElementos da matriz A\n");
+				ExibirElementoMatriz(A);
+				printf("\nElementos da matriz B\n");
+				ExibirElementoMatriz(B);
+	    	break;
+			
+			case 4 :
+				printf("\nDigite a posicao do elemento");
+				printf("\nLinha: ");
+				scanf("%d",&a);
+				printf("Coluna: ");
+				scanf("%d",&b);
+				LerMatriz(A); //sempre usar vetor nas matrizes especiais
+				LerMatriz(B);
+				Consultar_Elemento (A, a, b);
+		    break;
+			
+			default :
+       			printf ("Valor invalido!\n");
+  		}
+		printf ("\n#########################################\n");    	
 	} while (i<5);
 	
 	return 0;
 }
+
