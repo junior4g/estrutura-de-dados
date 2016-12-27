@@ -1,6 +1,6 @@
 /*
 	Name: Orlando da Cruz Pereira Júnior      
-  Date: 10/09/16 11:56
+    Date: 10/09/16 11:56
 	Description: Matriz Diagonal
 */
 
@@ -22,13 +22,11 @@ void menu(){
 
 int main()
 {
-int matriz[5][5];
+int matriz[10][10];
 int x, y, cont=1,operacao,elemento,a,b;
 
-//matriz
-
-for(x=0 ; x<5 ; x++){
-    for(y=0 ; y<5 ; y++){
+for(x=0 ; x<10 ; x++){
+    for(y=0 ; y<10 ; y++){
     	if(x>y || x<y){
     		matriz[x][y] = 0;
     	}
@@ -39,18 +37,16 @@ for(x=0 ; x<5 ; x++){
     }
 }
 
-for(x=0 ; x<5 ; x++){
-    for(y=0 ; y<5 ; y++){
+for(x=0 ; x<10 ; x++){
+    for(y=0 ; y<10 ; y++){
         printf(" %3.2d",matriz[x][y]);
         
     }
     printf("\n");
 }
 printf("\n");
-cont=50;
+cont=10;
 
-//Consultar um elemento
-//chamando função menu de informações
 do{
 	menu();
     scanf("%d",&operacao);
@@ -68,16 +64,13 @@ do{
     	case 2:
     		printf("Listando elementos:");
     		printf("\n");
-    		for(x=0 ; x<5 ; x++){
-    			for(y=0 ; y<5 ; y++){
+    		for(x=0 ; x<10 ; x++){
+    			for(y=0 ; y<10 ; y++){
         			printf(" %3.2d",matriz[x][y]);
     			}
     			printf("\n");
 			}
     	break;
-
-      	default:
-    		printf("ERRORrrrr");
     }
 }while (operacao!=3);
 
